@@ -93,7 +93,7 @@ RSpec.describe Rack::Attack, type: :request do
 
     context 'when accessed through the API' do
       let(:throttle) { 'throttle_api_sign_up' }
-      let(:limit)  { 5 }
+      let(:limit)  { 1_000 }
       let(:period) { 30.minutes }
       let(:request) { -> { post path, headers: { 'REMOTE_ADDR' => remote_ip } } }
 
