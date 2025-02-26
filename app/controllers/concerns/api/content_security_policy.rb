@@ -7,7 +7,6 @@ module Api::ContentSecurityPolicy
     content_security_policy do |policy|
       # Set every directive that does not have a fallback
       policy.default_src :none
-      policy.frame_ancestors :none
       policy.form_action :none
 
       # Disable every directive with a fallback to cut on response size

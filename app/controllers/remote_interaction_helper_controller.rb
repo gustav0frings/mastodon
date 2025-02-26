@@ -28,7 +28,6 @@ class RemoteInteractionHelperController < ApplicationController
     p.worker_src false
 
     # Widen the directives that we do need
-    p.frame_ancestors :self
     p.connect_src :https
   end
 

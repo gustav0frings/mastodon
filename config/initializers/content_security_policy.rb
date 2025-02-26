@@ -15,7 +15,6 @@ media_hosts = policy.media_hosts
 Rails.application.config.content_security_policy do |p|
   p.base_uri        :none
   p.default_src     :none
-  p.frame_ancestors :none
   p.font_src        :self, assets_host
   p.img_src         :self, :data, :blob, *media_hosts
   p.style_src       :self, assets_host
@@ -68,7 +67,6 @@ Rails.application.reloader.to_prepare do
     LetterOpenerWeb::LettersController.content_security_policy do |p|
       p.child_src       :self
       p.connect_src     :none
-      p.frame_ancestors :self
       p.frame_src       :self
       p.script_src      :unsafe_inline
       p.style_src       :unsafe_inline
