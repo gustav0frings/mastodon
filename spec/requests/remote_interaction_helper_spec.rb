@@ -12,7 +12,6 @@ RSpec.describe 'Remote Interaction Helper' do
         .and render_template(:index, layout: 'helper_frame')
         .and have_attributes(
           headers: include(
-            'X-Frame-Options' => 'SAMEORIGIN',
             'Referrer-Policy' => 'no-referrer',
             'Content-Security-Policy' => expected_csp_headers
           )

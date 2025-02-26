@@ -34,7 +34,7 @@ class RemoteInteractionHelperController < ApplicationController
   def index
     expires_in(5.minutes, public: true, stale_while_revalidate: 30.seconds, stale_if_error: 1.day)
 
-    response.headers['X-Frame-Options'] = 'SAMEORIGIN'
+
     response.headers['Referrer-Policy'] = 'no-referrer'
 
     render layout: 'helper_frame'
