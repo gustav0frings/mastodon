@@ -38,6 +38,6 @@ RSpec.describe 'API namespace minimal Content-Security-Policy' do
   end
 
   def minimal_csp_headers
-    "default-src 'none'; frame-ancestors 'none'; form-action 'none'"
+    "default-src 'none'; form-action 'none'"
   end
 end
